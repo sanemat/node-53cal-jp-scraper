@@ -25,3 +25,8 @@
 var gomiCalJpScraper = require('../');
 
 gomiCalJpScraper.awesome(); // "awesome"
+// http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154
+// $('.today').find('#cal_kind a').text()
+// http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6
+//$('.today').find('#cal_kind a').length
+//table.calbox の何番目のtdか
