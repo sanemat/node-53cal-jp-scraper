@@ -83,12 +83,26 @@ gomiCalJpScraper.dateAndCategoryInMonth({ city: '1130104', area: '1130104154', y
 
 gomiCalJpScraper.cities(function(err, data){
   data = {
-    meta: {},
+    meta: {
+      key: 'city'
+    },
     result: [
       { '1430301': '熊本市' },
       { '1450101': '宮崎県北部' }
     ]
   }
+});
+
+gomiCalJpScraper.areas({ city: '1130104' }, function(err, data){
+  data = {
+    meta: {
+      city: '1130104'
+      key: 'area'
+    },
+    result: [
+      { '1234567890': '大和町' }
+    ]
+  };
 });
 
 // http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154
