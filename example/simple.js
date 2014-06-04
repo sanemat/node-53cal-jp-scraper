@@ -24,16 +24,61 @@
 
 var gomiCalJpScraper = require('../');
 
-gomiCalJpScraper.whatDay({ city: 1130104, area: 1130104154, date: '2014-06-04' }, function(err, data){
-  data = '燃やすゴミ';
+gomiCalJpScraper.whatDate({ city: 1130104, area: 1130104154, date: '2014-06-04' }, function(err, data){
+  data = {
+   meta: {
+     city: 1130104,
+     area: 1130104154
+   },
+   result: {
+     '2014-06-04': '燃やすゴミ'
+   }
+  };
 });
 
 gomiCalJpScraper.categories({ city: 1130104, area: 1130104154 }, function(err, data){
-  data = ['燃やすゴミ', '資源', '燃やさないゴミ'];
+  data = {
+    meta: {
+      city: 1130104,
+      area: 1130104154
+    },
+    result: [
+      '燃やすゴミ',
+      '資源',
+      '燃やさないゴミ'
+    ]
+  };
 });
 
 gomiCalJpScraper.mostRecentDate({ city: 1130104, area: 1130104154, date: '2014-06-04' }, function(err, data){
-  data = [{ '燃やすゴミ': '2014-06-05' }, { '資源': '2014-06-06' }, { '燃やさないゴミ': '2014-06-07' }];
+  data = {
+    meta: {
+      city: 1130104,
+      area: 1130104154
+    },
+    result: [
+      { '2014-06-05': '燃やすゴミ' },
+      { '2014-06-06': '資源' },
+      { '2014-06-07': '燃やさないゴミ' }
+    ]
+  };
+});
+
+gomiCalJpScraper.dateAndCategoryInMonth({ city: 1130104, area: 1130104154, year: 2014, month: 6 }, function(err, data){
+  data = {
+    meta: {
+      city: 1130104,
+      area: 1130104154,
+      year: 2014,
+      month: 6
+    },
+    result: [
+      { '2014-06-05': '燃やすゴミ' },
+      { '2014-06-06': '資源' },
+      { '2014-06-07': '燃やすゴミ' },
+      { '2014-06-08': '燃やさないゴミ' }
+    ]
+  };
 });
 
 // http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154
