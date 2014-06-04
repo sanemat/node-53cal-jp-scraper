@@ -2,6 +2,7 @@
 
 var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
+require('intelli-espower-loader');
 
 var paths = {
   lint: ['./gulpfile.js', './lib/**/*.js'],

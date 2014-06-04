@@ -1,5 +1,5 @@
 /*
- * node-53cal-jp-scraper
+ * 53cal-jp-scraper
  * https://github.com/sanemat/node-53cal-jp-scraper
  *
  * Copyright (c) 2014 sanemat
@@ -22,6 +22,6 @@
  * data = require('./data.js');
  */
 
-var node53calJpScraper = require('../');
+var gomiCalJpScraper = require('../');
 
-node53calJpScraper.awesome(); // "awesome"
+gomiCalJpScraper.awesome(); // "awesome"

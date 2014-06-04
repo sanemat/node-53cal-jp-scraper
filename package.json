@@ -1,11 +1,11 @@
 {
-  "name": "node-53cal-jp-scraper",
+  "name": "53cal-jp-scraper",
   "description": "The best module ever.",
   "version": "0.0.0",
   "homepage": "https://github.com/sanemat/node-53cal-jp-scraper",
   "bugs": "https://github.com/sanemat/node-53cal-jp-scraper/issues",
   "license": "MIT",
-  "main": "lib/node-53cal-jp-scraper.js",
+  "main": "lib/53cal-jp-scraper.js",
   "author": {
     "name": "sanemat",
     "email": "o.gata.ken@gmail.com"
@@ -13,6 +13,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sanemat/node-53cal-jp-scraper"
+  },
+  "directories": {
+    "test": "test/"
   },
   "keywords": [],
   "dependencies": {},
