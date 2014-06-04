@@ -24,11 +24,11 @@
 
 var gomiCalJpScraper = require('../');
 
-gomiCalJpScraper.whatDate({ city: 1130104, area: 1130104154, date: '2014-06-04' }, function(err, data){
+gomiCalJpScraper.whatDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(err, data){
   data = {
    meta: {
-     city: 1130104,
-     area: 1130104154
+     city: '1130104',
+     area: '1130104154'
    },
    result: {
      '2014-06-04': '燃やすゴミ'
@@ -36,11 +36,11 @@ gomiCalJpScraper.whatDate({ city: 1130104, area: 1130104154, date: '2014-06-04' 
   };
 });
 
-gomiCalJpScraper.categories({ city: 1130104, area: 1130104154 }, function(err, data){
+gomiCalJpScraper.categories({ city: '1130104', area: '1130104154' }, function(err, data){
   data = {
     meta: {
-      city: 1130104,
-      area: 1130104154
+      city: '1130104',
+      area: '1130104154'
     },
     result: [
       '燃やすゴミ',
@@ -50,11 +50,11 @@ gomiCalJpScraper.categories({ city: 1130104, area: 1130104154 }, function(err, d
   };
 });
 
-gomiCalJpScraper.mostRecentDate({ city: 1130104, area: 1130104154, date: '2014-06-04' }, function(err, data){
+gomiCalJpScraper.mostRecentDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(err, data){
   data = {
     meta: {
-      city: 1130104,
-      area: 1130104154
+      city: '1130104',
+      area: '1130104154'
     },
     result: [
       { '2014-06-05': '燃やすゴミ' },
@@ -64,11 +64,11 @@ gomiCalJpScraper.mostRecentDate({ city: 1130104, area: 1130104154, date: '2014-0
   };
 });
 
-gomiCalJpScraper.dateAndCategoryInMonth({ city: 1130104, area: 1130104154, year: 2014, month: 6 }, function(err, data){
+gomiCalJpScraper.dateAndCategoryInMonth({ city: '1130104', area: '1130104154', year: 2014, month: 6 }, function(err, data){
   data = {
     meta: {
-      city: 1130104,
-      area: 1130104154,
+      city: '1130104',
+      area: '1130104154',
       year: 2014,
       month: 6
     },
@@ -79,6 +79,16 @@ gomiCalJpScraper.dateAndCategoryInMonth({ city: 1130104, area: 1130104154, year:
       { '2014-06-08': '燃やさないゴミ' }
     ]
   };
+});
+
+gomiCalJpScraper.cities(function(err, data){
+  data = {
+    meta: {},
+    result: [
+      { '1430301': '熊本市' },
+      { '1450101': '宮崎県北部' }
+    ]
+  }
 });
 
 // http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154
