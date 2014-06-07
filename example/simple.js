@@ -22,8 +22,8 @@
  * data = require('./data.js');
  */
 
-var gomiCalJp = require('../');
-var scraper = gomiCalJp({city: '1130104', area: '1130104154'});
+var GomiCalJp = require('../');
+var scraper = GomiCalJp({city: '1130104', area: '1130104154'});
 
 scraper.whatDate('2014-06-04', function(data){
   data = {
@@ -82,7 +82,7 @@ scraper.dateAndCategoryInMonth(2014, 6, function(data){
   };
 });
 
-gomiCalJp.cities(function(data){
+GomiCalJp.cities(function(data){
   data = {
     meta: {
       key: 'city'
@@ -94,7 +94,7 @@ gomiCalJp.cities(function(data){
   };
 });
 
-gomiCalJp.areas('1130104', function(data){
+GomiCalJp.areas('1130104', function(data){
   data = {
     meta: {
       city: '1130104',
