@@ -96,7 +96,7 @@ gomiCalJpScraper.cities(function(err, data){
 gomiCalJpScraper.areas({ city: '1130104' }, function(err, data){
   data = {
     meta: {
-      city: '1130104'
+      city: '1130104',
       key: 'area'
     },
     result: [
