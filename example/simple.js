@@ -24,7 +24,7 @@
 
 var gomiCalJpScraper = require('../');
 
-gomiCalJpScraper.whatDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(err, data){
+gomiCalJpScraper.whatDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(data){
   data = {
    meta: {
      city: '1130104',
@@ -36,7 +36,7 @@ gomiCalJpScraper.whatDate({ city: '1130104', area: '1130104154', date: '2014-06-
   };
 });
 
-gomiCalJpScraper.categories({ city: '1130104', area: '1130104154' }, function(err, data){
+gomiCalJpScraper.categories({ city: '1130104', area: '1130104154' }, function(data){
   data = {
     meta: {
       city: '1130104',
@@ -50,7 +50,7 @@ gomiCalJpScraper.categories({ city: '1130104', area: '1130104154' }, function(er
   };
 });
 
-gomiCalJpScraper.mostRecentDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(err, data){
+gomiCalJpScraper.mostRecentDate({ city: '1130104', area: '1130104154', date: '2014-06-04' }, function(data){
   data = {
     meta: {
       city: '1130104',
@@ -64,7 +64,7 @@ gomiCalJpScraper.mostRecentDate({ city: '1130104', area: '1130104154', date: '20
   };
 });
 
-gomiCalJpScraper.dateAndCategoryInMonth({ city: '1130104', area: '1130104154', year: 2014, month: 6 }, function(err, data){
+gomiCalJpScraper.dateAndCategoryInMonth({ city: '1130104', area: '1130104154', year: 2014, month: 6 }, function(data){
   data = {
     meta: {
       city: '1130104',
@@ -81,7 +81,7 @@ gomiCalJpScraper.dateAndCategoryInMonth({ city: '1130104', area: '1130104154', y
   };
 });
 
-gomiCalJpScraper.cities(function(err, data){
+gomiCalJpScraper.cities(function(data){
   data = {
     meta: {
       key: 'city'
@@ -93,7 +93,7 @@ gomiCalJpScraper.cities(function(err, data){
   }
 });
 
-gomiCalJpScraper.areas({ city: '1130104' }, function(err, data){
+gomiCalJpScraper.areas({ city: '1130104' }, function(data){
   data = {
     meta: {
       city: '1130104',
