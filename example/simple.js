@@ -25,7 +25,7 @@
 var GomiCalJp = require('../');
 var scraper = GomiCalJp({city: '1130104', area: '1130104154'});
 
-scraper.whatDate('2014-06-04', function(data){
+scraper.whatDate('2014-06-04', function(err, data){
   data = {
     meta: {
       city: '1130104',
@@ -37,7 +37,7 @@ scraper.whatDate('2014-06-04', function(data){
   };
 });
 
-scraper.categories(function(data){
+scraper.categories(function(err, data){
   data = {
     meta: {
       city: '1130104',
@@ -51,7 +51,7 @@ scraper.categories(function(data){
   };
 });
 
-scraper.mostRecentDate('2014-06-04', function(data){
+scraper.mostRecentDate('2014-06-04', function(err, data){
   data = {
     meta: {
       city: '1130104',
@@ -65,7 +65,7 @@ scraper.mostRecentDate('2014-06-04', function(data){
   };
 });
 
-scraper.dateAndCategoryInMonth(2014, 6, function(data){
+scraper.dateAndCategoryInMonth(2014, 6, function(err, data){
   data = {
     meta: {
       city: '1130104',
@@ -82,7 +82,7 @@ scraper.dateAndCategoryInMonth(2014, 6, function(data){
   };
 });
 
-GomiCalJp.cities(function(data){
+GomiCalJp.cities(function(err, data){
   data = {
     meta: {
       key: 'city'
@@ -94,7 +94,7 @@ GomiCalJp.cities(function(data){
   };
 });
 
-GomiCalJp.areas('1130104', function(data){
+GomiCalJp.areas('1130104', function(err, data){
   data = {
     meta: {
       city: '1130104',
