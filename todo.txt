@@ -1,2 +1,0 @@
-- change callback argument
-  callback(data) -> callback(err, data)
