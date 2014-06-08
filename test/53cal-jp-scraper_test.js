@@ -31,7 +31,7 @@ describe('gomiCalJpScraper', function () {
       assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', year: 2014, month: 6});
       assert.deepEqual(data.result[0], {'2014-06-01': null});
       assert.deepEqual(data.result[1], {'2014-06-02': '陶器・ガラス・金属ごみ'});
-      assert.deepEqual(data.result[2], {'2014-06-03': '陶器・ガラス・金属ごみ'});
+      assert.deepEqual(data.result[2], {'2014-06-03': '燃やすごみ'});
       assert.deepEqual(data.result[3], {'2014-06-04': null});
       done();
     });
