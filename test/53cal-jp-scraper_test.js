@@ -26,6 +26,8 @@ describe('gomiCalJpScraper', function () {
   it('should be date and category in month', function(done){
     scraper.dateAndCategoryInMonth(2014, 6, function(data){
       assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', year: 2014, month: 6});
+      assert.deepEqual(data.result[0], [{'2014-06-01': '燃やすゴミ'}]);
+      assert.deepEqual(data.result, [{'2014-06-01': '燃やすゴミ'}]);
       done();
     });
   });
