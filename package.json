@@ -20,7 +20,8 @@
   "keywords": [],
   "dependencies": {
     "cheerio": "^0.16.0",
-    "request": "^2.36.0"
+    "request": "^2.36.0",
+    "sprintf-js": "0.0.7"
   },
   "devDependencies": {
     "coveralls": "^2.10.0",
