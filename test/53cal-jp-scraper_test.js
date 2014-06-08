@@ -5,8 +5,14 @@ var assert = require('power-assert');
 var nock = require('nock');
 
 describe('gomiCalJpScraper', function () {
+  var scraper;
+
+  before(function(done){
+    scraper = GomiCalJp({ city: '1130104', area: '1130104154' });
+    done();
+  });
+
   it('should be categories', function(done){
-    var scraper = GomiCalJp({ city: '1130104', area: '1130104154' });
     nock('http://www.53cal.jp')
       .get('/areacalendar/?city=1130104&area=1130104154')
       .replyWithFile(200, __dirname + '/53caljp-minamioi-20140531.html');
