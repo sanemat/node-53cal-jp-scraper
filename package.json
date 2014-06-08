@@ -18,7 +18,10 @@
     "test": "test/"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "cheerio": "^0.16.0",
+    "request": "^2.36.0"
+  },
   "devDependencies": {
     "coveralls": "^2.10.0",
     "espower-loader": "^0.7.1",
@@ -33,6 +36,7 @@
     "gulp-util": "^2.2.16",
     "intelli-espower-loader": "^0.1.0",
     "jshint-stylish": "^0.2.0",
+    "nock": "^0.34.0",
     "power-assert": "^0.7.2"
   },
   "scripts": {
