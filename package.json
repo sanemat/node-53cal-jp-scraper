@@ -20,6 +20,7 @@
   "keywords": [],
   "dependencies": {
     "cheerio": "^0.16.0",
+    "moment": "^2.6.0",
     "pad": "0.0.5",
     "request": "^2.36.0",
     "sprintf-js": "0.0.7"

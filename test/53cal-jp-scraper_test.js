@@ -47,7 +47,7 @@ describe('gomiCalJpScraper', function () {
       .replyWithFile(200, __dirname + '/53caljp-minamioi-20140601.html');
     scraper.whatDate('2014-06-01', function(err, data){
       assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', cityName: '東京都品川区',areaName: '南大井6丁目18番地(大森住宅）以外'});
-      assert.deepEqual(date.result, {'2014-06-01': null});
+      assert.deepEqual(data.result, {'2014-06-01': null});
       done();
     });
   });
@@ -58,7 +58,7 @@ describe('gomiCalJpScraper', function () {
       .replyWithFile(200, __dirname + '/53caljp-minamioi-20140601.html');
     scraper.whatDate('2014-06-02', function(err, data){
       assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', cityName: '東京都品川区',areaName: '南大井6丁目18番地(大森住宅）以外'});
-      assert.deepEqual(date.result, {'2014-06-01': '陶器・ガラス・金属ごみ'});
+      assert.deepEqual(data.result, {'2014-06-02': '陶器・ガラス・金属ごみ'});
       done();
     });
   });
