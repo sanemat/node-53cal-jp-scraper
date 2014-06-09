@@ -1,7 +1,7 @@
 # 53cal-jp-scraper
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image] [![Coverage Status][coveralls-image]][coveralls-url]
 
-The best module ever.
+Scrape the days of 53cal.jp
 
 
 ## Install
@@ -14,13 +14,31 @@ $ npm install --save 53cal-jp-scraper
 ## Usage
 
 ```javascript
-var gomiCalJpScraper = require('53cal-jp-scraper');
-gomiCalJpScraper.awesome(); // "awesome"
+var GomiCalJp = require('../');
+var scraper = GomiCalJp({city: '1130104', area: '1130104154'});
+
+scraper.whatDate('2014-06-04', function(err, data){
+  data = {
+    meta: {
+      city: '1130104',
+      area: '1130104154',
+      cityName: '東京都品川区',
+      areaName: '南大井6丁目18番地(大森住宅）以外'
+    },
+    result: {
+      '2014-06-04': '燃やすゴミ'
+    }
+  };
+});
 ```
 
 ## API
 
-_(Coming soon)_
+categories
+
+dateAndCategoryInMonth
+
+whatDate
 
 
 ## Contributing
