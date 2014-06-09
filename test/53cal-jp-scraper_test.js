@@ -41,4 +41,25 @@ describe('gomiCalJpScraper', function () {
     });
   });
 
+  it('should be what date(null)', function(done){
+    nock('http://www.53cal.jp')
+      .get('/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6')
+      .replyWithFile(200, __dirname + '/53caljp-minamioi-20140601.html');
+    scraper.whatDate('2014-06-01', function(err, data){
+      assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', cityName: '東京都品川区',areaName: '南大井6丁目18番地(大森住宅）以外'});
+      assert.deepEqual(data.result, {'2014-06-01': null});
+      done();
+    });
+  });
+
+  it('should be what date(gomi)', function(done){
+    nock('http://www.53cal.jp')
+      .get('/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6')
+      .replyWithFile(200, __dirname + '/53caljp-minamioi-20140601.html');
+    scraper.whatDate('2014-06-02', function(err, data){
+      assert.deepEqual(data.meta, {city: '1130104', area: '1130104154', cityName: '東京都品川区',areaName: '南大井6丁目18番地(大森住宅）以外'});
+      assert.deepEqual(data.result, {'2014-06-02': '陶器・ガラス・金属ごみ'});
+      done();
+    });
+  });
 });
