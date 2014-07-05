@@ -31,7 +31,8 @@ scraper.whatDate('2014-06-04', function(err, data){
       city: '1130104',
       area: '1130104154',
       cityName: '東京都品川区',
-      areaName: '南大井6丁目18番地(大森住宅）以外'
+      areaName: '南大井6丁目18番地(大森住宅）以外',
+      link: 'http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6'
     },
     result: {
       '2014-06-04': '燃やすゴミ'
@@ -45,7 +46,8 @@ scraper.categories(function(err, data){
       city: '1130104',
       area: '1130104154',
       cityName: '東京都品川区',
-      areaName: '南大井6丁目18番地(大森住宅）以外'
+      areaName: '南大井6丁目18番地(大森住宅）以外',
+      link: 'http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154'
     },
     result: [
       '燃やすゴミ',
@@ -61,7 +63,8 @@ scraper.mostRecentDate('2014-06-04', function(err, data){
       city: '1130104',
       area: '1130104154',
       cityName: '東京都品川区',
-      areaName: '南大井6丁目18番地(大森住宅）以外'
+      areaName: '南大井6丁目18番地(大森住宅）以外',
+      link: 'http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6'
     },
     result: [
       { '2014-06-05': '燃やすゴミ' },
@@ -79,7 +82,8 @@ scraper.dateAndCategoryInMonth(2014, 6, function(err, data){
       year: 2014,
       month: 6,
       cityName: '東京都品川区',
-      areaName: '南大井6丁目18番地(大森住宅）以外'
+      areaName: '南大井6丁目18番地(大森住宅）以外',
+      link: 'http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6'
     },
     result: [
       { '2014-06-05': '燃やすゴミ' },
